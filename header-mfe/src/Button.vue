@@ -3,7 +3,9 @@
 </script>
 
 <template>
-
+  <button>
+    Mon button
+  </button>
 </template>
 
 <style scoped>
