@@ -1,6 +1,6 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginVue } from '@rsbuild/plugin-vue';
-import {pluginModuleFederation} from "@module-federation/rsbuild-plugin";
+import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
 
 export default defineConfig({
   plugins: [
@@ -8,13 +8,14 @@ export default defineConfig({
       pluginModuleFederation({
         name: 'header',
         exposes: {
-          './button': './src/Button.vue',
+          './Button': './src/components/Button.vue',
         },
         shared: {
           vue: {
             singleton: true,
-            requiredVersion: '^3.0.0',
-          },
+            requiredVersion: '^3.5.3',
+            eager: true,
+          }
         }
       })
   ],

@@ -10,7 +10,6 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
-    "@module-federation/dts-plugin": "^0.8.11",
     "@module-federation/enhanced": "^0.8.11",
     "vue": "^3.5.13"
   },

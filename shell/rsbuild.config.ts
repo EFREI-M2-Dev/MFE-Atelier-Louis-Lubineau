@@ -10,7 +10,13 @@ export default defineConfig({
         remotes: {
           header: 'header@http://localhost:3000/mf-manifest.json',
         },
-        shared: ['vue']
+        shared: {
+          vue: {
+            singleton: true,
+            requiredVersion: '^3.5.3',
+            eager: true,
+          }
+        }
       })
   ],
   server: {
