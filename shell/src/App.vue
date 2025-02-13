@@ -1,14 +1,16 @@
 <script setup>
-import ProviderButton from 'federation_producer/button';
+import { defineAsyncComponent } from 'vue';
+
+const HeaderProvider = defineAsyncComponent(() => import('federation_producer/header'));
 </script>
 
 <template>
   <div class="content">
     <h1>Rsbuild with Vue</h1>
     <p>Start building amazing things with Rsbuild.</p>
-    Caca
-
-    <ProviderButton />
+    <Suspense>
+      <HeaderProvider />
+    </Suspense>
   </div>
 </template>
 
