@@ -6,19 +6,14 @@ export default defineConfig({
   plugins: [
       pluginVue(),
       pluginModuleFederation({
-        name: 'header',
-        exposes: {
-          './button': './src/Button.vue',
+        name: 'shell',
+        remotes: {
+          header: 'header@http://localhost:3000/mf-manifest.json',
         },
-        shared: {
-          vue: {
-            singleton: true,
-            requiredVersion: '^3.0.0',
-          },
-        }
+        shared: ['vue']
       })
   ],
   server: {
-    port: 3000,
+    port: 2000,
   }
 });
