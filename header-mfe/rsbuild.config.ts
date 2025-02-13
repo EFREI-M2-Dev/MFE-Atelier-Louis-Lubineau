@@ -6,9 +6,9 @@ export default defineConfig({
   plugins: [
       pluginVue(),
       pluginModuleFederation({
-        name: 'header',
+        name: 'federation_producer',
         exposes: {
-          './Button': './src/components/Button.vue',
+          './button': './src/components/Button.vue',
         },
         shared: {
           vue: {

@@ -6,9 +6,10 @@ export default defineConfig({
   plugins: [
       pluginVue(),
       pluginModuleFederation({
-        name: 'shell',
+        name: 'federation_consumer',
         remotes: {
-          header: 'header@http://localhost:3000/mf-manifest.json',
+          federation_producer:
+            'federation_producer@http://localhost:3000/mf-manifest.json',
         },
         shared: {
           vue: {

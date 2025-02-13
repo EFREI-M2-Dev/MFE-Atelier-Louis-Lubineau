@@ -1,5 +1,5 @@
 <script setup>
-import ProviderButton from 'header/button';
+import ProviderButton from 'federation_producer/button';
 </script>
 
 <template>
